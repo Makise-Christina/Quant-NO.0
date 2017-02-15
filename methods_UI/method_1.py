@@ -2,7 +2,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-def resetPlot():
+def resetPlot(P):
 
     X = np.linspace(0, 240, 240, endpoint = True)
 
@@ -12,7 +12,7 @@ def resetPlot():
 
     # set limits, ticks
     plt.xlim(X.min() - 10, X.max() + 10)
-    # plt.ylim(P.min(), P.max())
+    plt.ylim(P * 0.9, P * 1.1 )
 
     plt.xticks([0,30,60,90,120,150,180,210,240])
 
