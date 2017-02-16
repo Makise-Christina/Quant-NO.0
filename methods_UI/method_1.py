@@ -8,7 +8,7 @@ def resetPlot(P):
 
     # Create new figure
     plt.figure(figsize = (12,6), dpi = 80)
-    plt.subplot(111)
+    plt.subplot(211)
 
     # set limits, ticks
     plt.xlim(X.min() - 10, X.max() + 10)
@@ -22,6 +22,15 @@ def resetPlot(P):
 def drawLine(P):
     X = np.linspace(0, 240, 240, endpoint = True)
     plt.plot(X, P)
+
+def drawBar(A):
+    plt.subplot(212)
+    X = np.linspace(0, 240, 240, endpoint = True)
+    # set limits, ticks
+    plt.xlim(X.min() - 10, X.max() + 10)
+    plt.xticks([0,30,60,90,120,150,180,210,240])
+
+    plt.bar(X, A)
 
 def drawAll():
     plt.show()
